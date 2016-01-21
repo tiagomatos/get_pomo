@@ -25,7 +25,7 @@ Setup
     msgids = translations.reject{|t|t.plural? or t.fuzzy? or t.obsolete?}.map(&:msgid)
 
     #or write a new po file (unique by msgid, with merged references for non uniques)...
-    File.open('xxx.po','w){|f|f.print(GetPomo::PoFile.to_text(translations, :merge => true))}
+    File.open('xxx.po','w'){|f|f.print(GetPomo::PoFile.to_text(translations, :merge => true))}
 
 
 ###Instance interface
